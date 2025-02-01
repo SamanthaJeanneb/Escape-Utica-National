@@ -1,7 +1,4 @@
 # Escape-Kestrel-Mutual
-# **Escape Kestrel Mutual**  
-
-## **Overview**  
 Escape Kestrel Mutual is a text-based adventure game where players must navigate the Kestrel Mutual Insurance office, avoiding security guards while interacting with NPCs to gather information and find a way out. The game features decision-based gameplay, allowing players to explore different paths, uncover secrets, and strategize their escape.  
 
 ## **Tech Stack**  
