@@ -1,0 +1,104 @@
+<xml version="1.0" encoding="UTF-8">
+  <!-- Dungeon Floor !-->
+  <room name="Entrance" description="This room is lined with files on every employee, offering deep insights and perhaps secrets. The air is thick with the weight of career-defining decisions.">
+    <door direction="north" other_room="Hallway" name="Entrance Hallway Door" description="Main door connecting the entrance and the hallway." locked="false"/>
+    <player name="Aubrey" description="the one who is trying to escape!"/>
+    <item name="Briefcase" description="Often carried by employees to meetings, containing important papers or contracts" weight="10" carryable="false" hidden="false"/>
+  </room>
+  <room name="Hallway" description="This room is lined with files on every employee, offering deep insights and perhaps secrets. The air is thick with the weight of career-defining decisions.">
+    <door direction="north" other_room="Boiler Room" name="Boiler Room Door" description="Door connecting the hallway and the boiler room." locked="false"/>
+    <door direction="west" other_room="Meeting Room" name="Meeting Room Door" description="Door connecting the hallway and the meeting room." locked="false"/>
+    <door direction="east" other_room="Security Office" name="Security Office Door" description="Secured door connecting the hallway and the security office." locked="true"/>
+    <door direction="south" other_room="Entrance" name="Entrance Hallway Door" description="Main door connecting the entrance and the hallway." locked="false"/>
+    <item name="Ballpoint Pen Dagger" description="A seemingly innocent ballpoint pen with a retractable blade hidden within. Useful for stealthy attacks." weight="5" carryable="true" hidden="true" weapon="1" power="25"/>
+    <item name="Metal Ruler" description="A solid metal ruler with sharp edges, suitable for slashing or jabbing." weight="10" carryable="true" hidden="false" weapon="1" power="25"/>
+    <item name="Monitor Shield" description="A reinforced computer monitor stripped from its stand. Provides excellent defense while also being a formidable blunt weapon." weight="10" carryable="true" hidden="false" weapon="1" power="55" >
+      <key name="Boiler KeyCard" description="Unlocks door between Gym and Boiler Room" door="Gym Room Boiler Door" weight="0" carryable="true" hidden="true"/>
+    </item>
+  </room>
+  <room name="Human Resources" description="This room is lined with files on every employee, offering deep insights and perhaps secrets. The air is thick with the weight of career-defining decisions.">
+    <door direction="west" other_room="Garage" name="HR Garage Door" description="Door connecting human resources and the garage." locked="false"/>
+    <maid name="Heather" description="A woman playing violin in.. here?" cleaning="false" type="3" patience="2"/>
+    <item name="Hole Puncher" description="A heavy-duty hole puncher, capable of delivering a solid blow with its metal construction." weight="20" carryable="true" hidden="false" weapon="1" power="35"/>
+  </room>
+  <!-- Main Floor !-->
+  <room name="Meeting Room" description="A sleek conference room with a long table, where strategies and corporate battles unfold under the glow of an overhead projector.">
+    <door direction="east" other_room="Hallway" name="Meeting Room Door" description="Door connecting the hallway and the meeting room." locked="false"/>
+    <door direction="west" other_room="Bathroom" name="Bathroom Door" description="Door connecting the meeting room and the bathroom." locked="false"/>
+    <guard name="Pinti" description="Technically literate but lightly lazy guard, doesn't like doing more than he has to">
+      <guarditem name="Pinti's KeyCard" description="Card with access to Soulless Cubicles through the Gym" door="Cubicles Gym Door" weight="1" carryable="true" hidden="true" isKey="true" />
+    </guard>
+    <item name="Stack of Papers" description="Boring documents" weight="100" carryable="false" hidden="false">
+      <item name="Gold Ring" description="Pretty gold ring, left here after a meeting" weight="1" carryable="true" hidden="true"/>
+    </item>
+    <item name="Swivel chair" description="A chair, or a fun ride if youre bored enough" weight="50" carryable="false" hidden="false"/>
+  </room>
+  <room name="More Soulless Cubicles" description="Endless rows of drab, gray cubicles. The monotonous hum of computers and the occasional sigh are the only breaks in the silence.">
+    <door direction="east" other_room="Gym" name="Cubicles Gym Door" description="Door connecting the cubicles and the gym." locked="true"/>
+    <door direction="north" other_room="Distribution Center" name="Cubicles Distribution Center Door" description="Door connecting the cubicles and the distribution center." locked="true"/>
+    <door direction="west" other_room="Server Room" name="Cubicles Server Room Door" description="Door connecting the cubicles and the server room." locked="true"/>
+    <item name="Laptop" description="Commonly used by employees for work tasks, or for Craig and Bob to play games" weight="10" carryable="true" hidden="false"/>
+    <guard name="Craig" description="Usually playing games on his phone instead of working">
+      <guarditem name="Craig's KeyCard" description="Card with access to Security office" door="Security Office Door" weight="1" carryable="true" hidden="true" isKey="true" />
+    </guard>
+    <guard name="Bob" description="Guard wearing a red sox hat">
+      <guarditem name="Employee Records" description="Detailed records of all employees." weight="1" carryable="true" hidden="false"/>
+      <item name="Switch blade" description="I dont think hes supposed to have this" weight="12" carryable="true" hidden="false" weapon="1" power="100"/>
+    </guard>
+  </room>
+  <room name="Medical Office" description="Sterile and pristine, this office is stocked with medical supplies and emergency protocols, a sanctuary in times of need.">
+    <door direction="north" other_room="Cafeteria" name="Medical Office Cafeteria Door" description="Door connecting the medical office and the cafeteria." locked="true"/>
+    <door direction="south" other_room="Gym" name="Medical Office Gym Door" description="Door connecting the medical office and the gym." locked="false"/>
+    <door direction="west" other_room="Distribution Center" name="Medical Office Distribution Center Door" description="Door connecting the medical office and the distribution center." locked="false"/>
+    <maid name="Maria" description="best custodial staff UNIGAS has ever seen" cleaning="false" type="4" patience="3"/>
+  </room>
+  <room name="Bathroom" description="A surprisingly clean and well-maintained space with an echo that carries secrets spoken in hushed tones.">
+    <door direction="east" other_room="Meeting Room" name="Bathroom Door" description="Door connecting the meeting room and the bathroom." locked="false"/>
+  </room>
+  <room name="Gym" description="Equipped with state-of-the-art fitness machines and heavy weights, a place for employees to shed stress and build strength.">
+    <door direction="north" other_room="Medical Office" name="Medical Office Gym Door" description="Door connecting the medical office and the gym." locked="false"/>
+    <door direction="west" other_room="More Soulless Cubicles" name="Cubicles Gym Door" description="Door connecting the cubicles and the gym." locked="true"/>
+    <door direction="south" other_room="Boiler Room" name="Gym Boiler Room Door" description="Door connecting the gym and the boiler room." locked="false"/>
+  </room>
+  <room name="Garage" description="A dimly lit, vast space filled with company vehicles. The smell of oil and rubber permeates the air.">
+    <door direction="west" other_room="Boiler Room" name="Garage Boiler Room Door" description="Door connecting the garage and the boiler room." locked="false"/>
+    <door direction="south" other_room="Security Office" name="Security Office Garage Door" description="Secured door connecting the security office and the garage." locked="true"/>
+    <door direction="east" other_room="Human Resources" name="HR Garage Door" description="Door connecting human resources and the garage." locked="false"/>
+    <maid name="Maddie" description="Sitting right outside the security room.." cleaning="false" type="1" patience="4"/>
+    <item name="Metal Scissors" description="A pair of sharp metal scissors." weight="12" carryable="true" hidden="false" weapon="1" power="28"/>
+  </room>
+  <room name="Security Office" description="The nerve center of the building's security, buzzing with monitors displaying every corner of the facility.">
+    <door direction="north" other_room="Garage" name="Security Office Garage Door" description="Secured door connecting the security office and the garage." locked="true"/>
+    <door direction="west" other_room="Hallway" name="Security Office Door" description="Secured door connecting the hallway and the security office." locked="true"/>
+    <item name="Rubber Band Slingshot" description="A makeshift slingshot crafted from a rubber band and a paperclip, surprisingly effective for launching small projectiles." weight="3" carryable="true" hidden="true" weapon="1" power="20"/>
+    <guard name="Will" description="The most diligent of them all, except for nap time" sleeping="true" power="10">
+      <guarditem name="Will's KeyCard" description="Card with access to Server Room" door="Cubicles Server Room Door" weight="1" carryable="true" hidden="true" isKey="true" />
+    </guard>
+  </room>
+  <room name="Distribution Center" description="A hub of activity where goods are received and dispatched. Forklifts and pallets dominate the floor space.">
+    <door direction="east" other_room="Medical Office" name="Medical Office Distribution Center Door" description="Door connecting the medical office and the distribution center." locked="false"/>
+    <door direction="south" other_room="More Soulless Cubicles" name="Cubicles Distribution Center Door" description="Door connecting the cubicles and the distribution center." locked="true"/>
+    <item name="Metal Ruler" description="A solid metal ruler with sharp edges, suitable for slashing or jabbing." weight="10" carryable="true" hidden="false" weapon="1" power="25"/>
+
+  </room>
+  <room name="Server Room" description="A chilly room filled with racks of blinking servers storing valuable data. The sound of whirring fans fills the air.">
+    <door direction="east" other_room="More Soulless Cubicles" name="Cubicles Server Room Door" description="Door connecting the cubicles and the server room." locked="true"/>
+    <item name="Server Case" description=" Are they in here..? " weight="100" carryable="false" hidden="false">
+    <item name="server" description="" weight="10" carryable="true" hidden="true"/>
+    </item>
+
+  </room>
+  <room name="Boiler Room" description="A sweltering room beneath the building, filled with pipes and gauges. It's easy to feel lost among the steam.">
+    <door direction="north" other_room="Gym" name="Gym Boiler Room Door" description="Door connecting the gym and the boiler room." locked="false"/>
+    <door direction="east" other_room="Garage" name="Garage Boiler Room Door" description="Door connecting the garage and the boiler room." locked="false"/>
+    <door direction="south" other_room="Hallway" name="Boiler Room Door" description= "Door connecting the hallway and the boiler room." locked="false"/>
+    <guard name="Earl" description="The laziest guard by far" power="0">
+      <guarditem name="Earl's KeyCard" description="Card with access to Cafeteria" door="Medical Office Cafeteria Door" weight="1" carryable="true" hidden="true" isKey="true" />
+    </guard>
+    <item name="Old scrap pipe" description="Big heavy piece of metal, can do some real damage" weight="25" carryable="true" hidden="false" weapon="1" power="70"/>
+  </room>
+  <room name="Cafeteria/Dining Room" description="A large and welcoming space where employees gather to dine and unwind. The smell of coffee blends with the buzz of conversation.">
+    <door direction="south" other_room="Medical Office" name="Medical Office Cafeteria Door" description="Door connecting the medical office and the cafeteria." locked="true"/>
+    <maid name="Michelle Carlson" description="A beautiful woman dressed in fancy attire... why is she here..?" cleaning="false" type="2" patience="4"/>
+  </room>
+</xml>
